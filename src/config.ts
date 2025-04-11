@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
-import * as trading from "./trade";
-import * as transaction from "./transaction";
-import * as binance from "./binance";
+import * as trading from "./applications/trade";
+import * as transaction from "./applications/transaction";
+import * as binance from "./applications/binance";
 
 export default function configElysia() {
     const app = new Elysia()

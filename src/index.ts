@@ -1,5 +1,6 @@
 import configElysia from "./config";
-
+import { AppDataSource } from "./data-source";
+const ds = await AppDataSource.initialize()
 const instanceServer = configElysia()
 const app = instanceServer.initRoutes().startServer(3000);
 const fistSymbol = await app.handle(new Request('http://localhost/trade/get-symbols')).then(async (response) => (await response.json())[0].symbol)
